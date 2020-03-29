@@ -1,0 +1,52 @@
+/* Defaults */
+
+.navbar-custom {
+    background-color: rgb(158, 214, 158);
+    opacity: 70%;
+    height: 65px;
+}
+
+.navbar-custom .navbar-text {
+    color: black;
+    opacity: 100%;
+    margin-right: 20px;
+    font-size: 22px;
+}
+
+nav ul, footer ul {
+    padding: 0px;
+    list-style: none;
+    font-weight: bold;
+}
+
+nav ul li, footer ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+.container {
+    margin-top: 30px;
+    width: 95%;
+}
+
+/* Homepage */
+
+#homepage {
+    width: 100%;
+    margin: auto;
+    margin-top: 100px;
+}
+
+.overview {
+    font-size: 56px;
+    text-align: center;
+}
+
+#emphasis {
+    color: green;
+}
+
+#search_bar {
+    display: inline-block;
+    background-color: red;
+}
