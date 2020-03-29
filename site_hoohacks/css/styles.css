@@ -1,16 +1,24 @@
 /* Defaults */
 
+body {
+    margin: auto;
+}
+
 .navbar-custom {
-    background-color: rgb(158, 214, 158);
+    background-color: rgb(188, 200, 212);
     opacity: 70%;
-    height: 65px;
+    height: 75px;
 }
 
 .navbar-custom .navbar-text {
-    color: black;
+    color: rgb(1, 101, 167);
     opacity: 100%;
     margin-right: 20px;
     font-size: 22px;
+}
+
+.logo {
+    opacity: 100%;
 }
 
 nav ul, footer ul {
@@ -25,28 +33,136 @@ nav ul li, footer ul li {
 }
 
 .container {
-    margin-top: 30px;
-    width: 95%;
+    width: 100%;
+    min-height: calc(100vh - 235px);
+}
+
+footer {
+    background-color: rgb(188, 200, 212);
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+}
+
+.footer-logo {
+    margin-bottom: 10px;
 }
 
 /* Homepage */
 
-#homepage {
-    width: 100%;
-    margin: auto;
-    margin-top: 100px;
+#bg-image {
+    background-image: url('/assets/background.jpg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    opacity: 90%;
+    width: 129.1%;
+    margin-left: -165px;
+    padding: 150px;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-bottom: 215px;
 }
 
-.overview {
-    font-size: 56px;
+#homepage {
+    width: 100%;
+    margin: 0 auto;
     text-align: center;
 }
 
-#emphasis {
-    color: green;
+.overview {
+    font-size: 72px;
+    margin-top: 30px;
+    margin-bottom: 40px;
+    padding-bottom: 17px;
+    color: white;
+    background-color: rgb(75, 75, 75);
+    opacity: 90%;
 }
 
-#search_bar {
+#emphasis {
+    color: rgb(165, 224, 170);
+}
+
+#search-bar {
+    display: flex;
+}
+
+.input-search {
+    margin-right: 15px;
+    display: block;
+}
+
+#destination {
+    width: 5000px;
+}
+
+/* Login specific */
+
+#login-page {
+    background-image: url('/assets/login-bg.png');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    opacity: 90%;
+    width: 131.5%;
+    margin-left: -190px;
+    padding: 50px;
+    padding-top: 20px;
+}
+
+#contentsMain {
+    width: 450px;
+    margin-left: 100px;
+    margin-top: 10px;
+    margin-bottom: -20px;
+    background-color: whitesmoke;
+    opacity: 90%;
+    text-align: center;
+    border-radius: 15px;
+}
+
+.login-logo {
+    padding-top: 50px;
+}
+
+.log-in-text {
+    padding-top: 10px;
+    color: rgb(1, 101, 167);
+    font-size: 36px;
+    letter-spacing: .1rem;
+}
+
+.userLogIn {
+    width: 95%;
+    padding: 8px 20px;
     display: inline-block;
-    background-color: red;
+    border: 2px solid rgb(1, 101, 167);
+    box-sizing: border-box;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+#liButton {
+    background-color: rgb(1, 101, 167);
+    color: white;
+    font-size: 18px;
+    border-radius: 5rem;
+    letter-spacing: .1rem;
+    font-weight: bold;
+    padding: 0.5rem;
+    margin-top: 50px;
+    width: 300px;
+}
+
+#signUpPrompt {
+    margin-top: -150px;
+    padding-bottom: 20px;
+}
+
+#suLink {
+    color: rgb(1, 101, 167);
 }
