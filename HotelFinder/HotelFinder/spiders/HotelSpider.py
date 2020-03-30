@@ -1,24 +1,14 @@
-import sqlite3
-from sqlite3 import OperationalError
+import csv
 
-conn = sqlite3.connect('us_cities.db')
-c = conn.cursor()
+with open("us_cities_states_counties.csv") as csv_file:
+    csv_reader = csv.reader(csv_file, delimiter=',')
+    line_count = 0
+    for row in csv_reader:
+        raw_data = row[0].split('|')
+        try:
+            print('%s is a city in %s' %(raw_data[0], raw_data[2]))
+        except IndexError, msg:
+            print("%s\nwe couldnt find it at %s" %(msg, raw_data[0]))
+        #print('%s' %(row[0]))
+        #print(f'{row["City"]} is a city in {row["State full"]}')
 
-sql_command = """SELECT US_CITIES.ID, US_STATES.STATE_CODE, US_STATES.STATE_NAME, US_CITIES.CITY, US_CITIES.COUNTY FROM US_STATES INNER JOIN US_CITIES ON US_STATES.ID = US_CITIES.ID_STATE ORDER BY US_CITIES.ID ASC INTO OUTFILE 'US_CITIES.csv' FIELDS TERMINATED BY ';' ECNLOSED BY '' LINES TERMINATED BY '\n';"""
-
-c.execute(sql_command)
-
-#fd = open('us_cities.sql')
-#sqlFile = fd.read()
-#fd.close()
-
-
-
-#sqlCommands = sqlFile.split(',')
-
-
-#for command in sqlCommands:
-#    try:
-#        c.execute(command)
-#    except OperationalError, msg:
-#        print("command skipped: ", msg)
