@@ -10,11 +10,10 @@ with open("us_cities_states_counties.csv") as csv_file:
         try:
             duckQs[line_count]= duckduckgo.query("Sustainable hotel %s, %s" %(raw_data[0], raw_data[2]))
         except IndexError:
-            print("fail on %s" %row)
+            duckQs[line_count]= duckduckgo.query("Sustainable hotel %s" %(raw_data[0]))
         line_count += 1
 for q in duckQs:
-    for res in q:
-        print(res.url)
+    print(url)
 #        try:
 #            print('%s is a city in %s' %(raw_data[0], raw_data[2]))
 #        except IndexError, msg:
