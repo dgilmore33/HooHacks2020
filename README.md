@@ -1,1 +1,2 @@
-# HooHacks2020
+# HooHacks2020 - GRAVEL
+<image src="GRAVEL%20LOGO/GRAVEL%20LOGO%20-%20TEXT%20.png" width="400">
